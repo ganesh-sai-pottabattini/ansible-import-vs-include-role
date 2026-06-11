@@ -14,7 +14,8 @@
 - name: change the fact
   set_fact:
     os: "debian"
-#- name: call role-3 which is not there actually
+
+- name: call role-3 which is not there actually
   #import_role:
   #include_role
     #name: role3
