@@ -2,8 +2,8 @@
   import_role:
   #include_role:
     name: common
-  loops:
-  - somesh
-  - lokesh
+  #loops:
+  #- somesh
+  #- lokesh
   tags:
   - hi
