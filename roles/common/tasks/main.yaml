@@ -14,6 +14,7 @@
 - name: change the fact
   set_fact:
     os: "debian"
+- name: after fact change
   debug:
     msg: "after change"
 
