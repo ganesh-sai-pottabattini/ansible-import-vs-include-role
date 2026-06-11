@@ -16,6 +16,6 @@
     os: "debian"
 
 - name: call role-3 which is not there actually
-  import_role:
-  #include_role
+  #import_role:
+  include_role:
     name: role3
