@@ -1,6 +1,6 @@
 - name: common -> main.yaml -> task1
   debug:
-    msg: " Hi, I am from common role - msg : 1"
+    msg: " Hi, I am from common role - msg : 1 {{ item }}"
 - name: common -> main.yaml -> task2
   debug:
     msg: " Hi, I am from common role - msg : 2"

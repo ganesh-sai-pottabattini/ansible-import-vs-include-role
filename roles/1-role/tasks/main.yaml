@@ -1,10 +1,10 @@
 - name: call common role
-  #import_role:
-  include_role:
+  import_role:
+  #include_role:
     name: common
   when: os == "redhat"
-  #loops:
-  #- somesh
-  #- lokesh
+  loops:
+  - somesh
+  - lokesh
   tags:
   - hi
