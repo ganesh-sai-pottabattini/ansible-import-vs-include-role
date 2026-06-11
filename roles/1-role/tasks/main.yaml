@@ -2,9 +2,9 @@
   import_role:
   #include_role:
     name: common
+  when: os == "redhat"
   #loops:
   #- somesh
   #- lokesh
   tags:
   - hi
-  when: os == "redhat"
