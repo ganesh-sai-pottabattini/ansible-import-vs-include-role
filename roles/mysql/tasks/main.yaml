@@ -1,10 +1,11 @@
-- name: Get the my_sql_root _pass from aws secret manager
-  debug:
-    msg: "{{ lookup('amazon.aws.aws_secret', 'roboshop/my_sql_root_password' , region='us-east-1') }}"
+#- name: Get the my_sql_root _pass from aws secret manager
+#  debug:
+#    msg: "{{ lookup('amazon.aws.aws_secret', 'roboshop/my_sql_root_password' , region='us-east-1') }}"
 
-- name: print password from vars -> main.yaml which was stored as root_password from aws secret manager
-  debug:
-    msg: "{{ root_password.my_sql_root_password }}"
+#- name: print password from vars -> main.yaml which was stored as root_password from aws secret manager
+#  debug:
+#    msg: "{{ root_password.MY_SQL_ROOT_PASSWORD }}"
+
 
 - name: Change hostname for "{{ component }}"
   hostname:
@@ -22,5 +23,5 @@
     enabled: yes
 
 - name: setup root password "{{ component }}"
-  #command: mysql_secure_installation --set-root-pass "{{ root_password.MY_SQL_ROOT_PASSWORD }}"
-  command: mysql_secure_installation --set-root-pass "{{ MY_SQL_ROOT_PASSWORD }}"
+  command: mysql_secure_installation --set-root-pass "{{ root_password.MY_SQL_ROOT_PASSWORD }}"
+  #command: mysql_secure_installation --set-root-pass "{{ MY_SQL_ROOT_PASSWORD }}"
