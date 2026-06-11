@@ -3,7 +3,7 @@
   include_role:
     name: common
   #when: os == "redhat"
-  loops:
+  loop:
   - somesh
   - lokesh
   tags:
