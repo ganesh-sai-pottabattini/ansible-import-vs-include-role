@@ -1,0 +1,20 @@
+- name: common -> main.yaml -> task1
+  debug:
+    msg: " Hi, I am from common role - msg : 1"
+- name: common -> main.yaml -> task2
+  debug:
+    msg: " Hi, I am from common role - msg : 2"
+- name: common -> main.yaml -> task3
+  debug:
+    msg: " Hi, I am from common role - msg : 3"
+- name: common -> main.yaml -> task4
+  debug:
+    msg: " Hi, I am from common role - msg : 4"
+
+- name: change the fact
+  set_fact:
+    os: "debian"
+#- name: call role-3 which is not there actually
+  #import_role:
+  #include_role
+    #name: role3
