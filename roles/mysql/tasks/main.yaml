@@ -2,9 +2,9 @@
 #  debug:
 #    msg: "{{ lookup('amazon.aws.aws_secret', 'roboshop/my_sql_root_password' , region='us-east-1') }}"
 
-- name: print password from vars -> main.yaml which was stored as root_password from aws secret manager
-  debug:
-    msg: "{{ root_password.MY_SQL_ROOT_PASSWORD }}"
+#- name: print password from vars -> main.yaml which was stored as root_password from aws secret manager
+#  debug:
+#    msg: "{{ root_password.MY_SQL_ROOT_PASSWORD }}"
 
 
 - name: Change hostname for "{{ component }}"
