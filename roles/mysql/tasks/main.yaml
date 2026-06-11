@@ -1,0 +1,17 @@
+- name: Change hostname for "{{ component }}"
+  hostname:
+    name: mysql.trivikram.online
+
+- name: Install MySQL Server for "{{ component }}"
+  dnf:
+    name: mysql-server
+    state: present
+
+- name: Start and Enable MySQL Service "{{ component }}"
+  service:
+    name: mysqld
+    state: started
+    enabled: yes
+
+- name: setup root password "{{ component }}"
+  command: mysql_secure_installation --set-root-pass "{{ MY_SQL_ROOT_PASSWORD }}"
