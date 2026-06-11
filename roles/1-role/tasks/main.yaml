@@ -7,3 +7,4 @@
   #- lokesh
   tags:
   - hi
+  when: os == "redhat"
