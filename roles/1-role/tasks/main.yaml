@@ -2,7 +2,7 @@
   #import_role:
   include_role:
     name: common
-  when: os == "redhat"
+  #when: os == "redhat"
   loops:
   - somesh
   - lokesh
