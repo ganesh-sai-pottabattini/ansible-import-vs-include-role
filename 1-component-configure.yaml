@@ -1,0 +1,9 @@
+# this file is to call the role for a specific component
+# ansible-playbook "component=mongodb" 0-comp-configure.yaml
+
+
+- name: Configuring roboshop project "{{ component }}" using ansible roles
+  hosts: "{{ component }}"
+  become: yes
+  roles:
+  - "{{ component }}"
